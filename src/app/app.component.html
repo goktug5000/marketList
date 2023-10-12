@@ -5,9 +5,10 @@
           Lists
         </h3>
         <div *ngFor="let holder of getHolder()">
+
           <table class="table table-striped table-bordered">
             <thead>
-              <th>{{holder.listOwner}}</th>
+              <!--<th>{{holder.listOwner}}</th>-->
               <tr>
                 <th>ürün</th>
                 <th>adet</th>
@@ -20,7 +21,46 @@
               </tr>
             </tbody>
           </table>
+
+
         </div>
+        <div>
+
+          <table class="table table-striped table-bordered">
+            <thead>
+              <th></th>
+              <tr>
+                <th>secili</th>
+                <th>kişi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let listTempp of getHolder()">
+                <td>
+                  <div class="custom-control custom-checkbox my-3">
+                    <input type="checkbox" class="custom-control-input" name="" id="displayAll">
+                    <label class="custom-control-label" for="displayAll">Add to AddList</label>
+                  </div>
+                </td>             
+                <td>{{listTempp["listOwner"]}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+
+                  
+        <div class="input-grup">
+          <input type="text" #addText class="form-control">
+          <div class="input-group-append">
+            <button class="btn btn-primary" (click)="addItem(addText.value); addText.value=''">Add</button>
+          </div>
+        </div>
+
+
+
+
     </div>
   </div>
 </div>

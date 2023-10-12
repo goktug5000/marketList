@@ -1,6 +1,8 @@
 export class ListTemp{
     listOwner:any;
+    inAddList=false;
     itemss:any;
+
     constructor(listOwnerr:any){
         this.listOwner=listOwnerr;
         this.itemss=[
@@ -25,7 +27,8 @@ export class ListTempHolder{
     constructor(){
         this.listTemps=[
             new ListTemp("goktug"),
-            new ListTemp("ahmet")
+            new ListTemp("ahmet"),
+            new ListTemp("mehmet")
         ]
     }
 }

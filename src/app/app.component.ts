@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.listTempHolder.listTemps[0]);
   }
-  getHolder(){
+  getHolder():[]{
     return this.listTempHolder.listTemps;
   }
   getOwner(){
@@ -23,5 +23,19 @@ export class AppComponent implements OnInit {
   }
   getItems(){
     return this.listTemp.itemss;
+  }
+
+  addItem(value:any){
+
+/*
+
+
+    if(value!=""){
+      for(var i=0;i<this.getHolder().length;i++)
+      {
+        console.log(i);
+      }
+    }
+*/
   }
 }
