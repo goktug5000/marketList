@@ -1,15 +1,19 @@
 export class ListTemp{
     listOwner:any;
-    inAddList=false;
-    itemss:any;
+    inAddList:boolean;
+    itemss:ListItem[];
 
-    constructor(listOwnerr:any){
+    constructor(listOwnerr:string, itemss: ListItem[]=[]){
         this.listOwner=listOwnerr;
-        this.itemss=[
-            new ListItem("su",2),
-            new ListItem("ekmek",4),
-            new ListItem("elma",3),
-        ]
+        this.inAddList=false;
+        this.itemss=itemss;
+    }
+
+    getItems(){
+        return this.itemss;
+    }
+    getInAddList():boolean{
+        return this.inAddList;
     }
 }
 export class ListItem{
@@ -23,12 +27,8 @@ export class ListItem{
 }
 export class ListTempHolder{
 
-    listTemps:any;
-    constructor(){
-        this.listTemps=[
-            new ListTemp("goktug"),
-            new ListTemp("ahmet"),
-            new ListTemp("mehmet")
-        ]
+    listTemps:ListTemp[];
+    constructor(listTempss:ListTemp[]){
+        this.listTemps=listTempss;
     }
 }
