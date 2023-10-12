@@ -9,6 +9,9 @@ export class ListTemp{
         this.itemss=itemss;
     }
 
+    addNewListItem(namee:string, amountt:any){
+        this.itemss.push(new ListItem(namee,amountt));
+    }
     getItems(){
         return this.itemss;
     }
@@ -19,7 +22,7 @@ export class ListTemp{
 export class ListItem{
     name;
     amount;
-    constructor(namee:any,amountt:any){
+    constructor(namee:string,amountt:any){
         
         this.name=namee;
         this.amount=amountt;

@@ -50,18 +50,22 @@ export class AppComponent implements OnInit {
   }
   
 
-  addItem(value:any){
+  addItem(namee:string, amountt:any){
     console.log("addItem()");
-    if(value!=""){
-      
+    if(namee!="" && amountt!=""){
+      /*
       for(var i=0;i<this.getListTemps().length;i++)
       {
         
       }
-      
+      */
       this.getListTemps().forEach(function (value) {
-        //console.log(value);
-        //console.log(value["inAddList"]);
+
+        if(value.inAddList){
+
+          value.addNewListItem(namee,amountt);
+        }
+
       });
     }
 

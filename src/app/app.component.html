@@ -36,7 +36,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr  *ngFor="let listTempp of listTempHolder.listTemps">
+              <tr  *ngFor="let listTempp of getListTemps()">
                 
                 <td>
 
@@ -59,9 +59,10 @@
 
                   
         <div class="input-grup">
-          <input type="text" #addText class="form-control">
+          mal<input type="text" #addText class="form-control">
+          adet<input type="text" #addValue class="form-control">
           <div class="input-group-append">
-            <button class="btn btn-primary" (click)="addItem(addText.value); addText.value=''">Add</button>
+            <button class="btn btn-primary" (click)="addItem(addText.value,addValue.value); addText.value=''; addValue.value=''">Add</button>
           </div>
         </div>
 
